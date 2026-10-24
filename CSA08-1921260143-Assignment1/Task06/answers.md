@@ -1,0 +1,3 @@
+# Task 6 — Functions
+
+`rate_per_litre()` returns the price per litre; `payout()` returns one delivery's amount; `ten_day_total()` returns the sum. Returning a value allows reuse/testing; printing only displays a result and cannot conveniently be used by another function. Local variables exist inside their function; module constants are global read-only-by-convention values. Docstrings explain each function. A long script repeats logic and is harder to maintain; reusable functions improve testing and clarity. Lambdas suit small one-expression callbacks but are not a replacement for named multi-step functions. Processing n entries is O(n) time; function-call overhead is small compared with improved maintainability.

@@ -1,0 +1,5 @@
+# Task 11 — Recommend and Defend the Final Design
+
+Use `Decimal` constructed from strings for rates, measurements, and monetary totals. Round each farmer's payable amount to two decimal places using `ROUND_HALF_UP`, then sum those payable amounts for the ten-day total. Keep rates in named constants or a configurable rate-card dictionary; for seasonal changes, load a selected rate card at startup from JSON. Validate every record and report errors clearly. Use a list of dictionaries/dataclasses when an audit trail is required; otherwise maintain a running total to reduce memory.
+
+The functions are modular and unit-testable. The algorithm is O(n) time per n milk entries. Running-total processing uses O(1) extra memory, while retaining every record uses O(n). It should scale algorithmically to 150,000 farmers, but production deployment also requires database persistence, access controls, backups, audit logs, concurrency handling, and performance testing on target hardware. Limitations include assumed SNF validation range, nearest-step policy, and no persistence/user interface. These business rules must be confirmed with the co-operative before deployment.

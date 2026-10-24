@@ -1,0 +1,3 @@
+# Task 7 — Modules
+
+`import milkrate` uses `milkrate.payout`; `from milkrate import payout` imports the named function; `import milkrate as mr` uses the alias `mr`. `if __name__ == "__main__":` runs the demonstration only when the file is executed directly, not when imported. Without the guard, demonstration output would appear during import. Python searches the current working directory and paths listed in `sys.path`. Shared modules avoid copying code into every script; the one-time import/cache cost is small, and rate changes are made centrally. `math` and `decimal` are standard-library modules.

@@ -1,0 +1,3 @@
+# Task 4 — Expressions
+
+Formula: `fat_steps = round((fat - 3.5) / 0.1)` and `snf_steps = round((snf - 8.5) / 0.1)`. Rate = `30 + fat_steps*0.40 + snf_steps*0.30`; payment = litres × rate, rounded to 2 decimals. Floating-point representation can make `(4.2 - 3.5) / 0.1` print near `7.000000000000001`; rounding the step count avoids using that noisy value directly. `int()` truncates toward zero, while `math.floor()` rounds down, so negative values differ. Use comparisons such as `2.0 <= fat <= 7.0`; `and` combines validation conditions. Exponentiation `**` has higher precedence than unary minus, so `-2**2` is `-4`, while `(-2)**2` is `4`.
